@@ -1,12 +1,13 @@
+from collections import defaultdict
+
 import pandas as pd
 import torch
-from sklearn.model_selection import train_test_split
 import torch.nn as nn
-from collections import defaultdict
-from transformers import BertModel, AdamW, get_linear_schedule_with_warmup
+from sklearn.model_selection import train_test_split
+from transformers import AdamW, BertModel, get_linear_schedule_with_warmup
 
 import config
-from engine import train_fn, eval_fn
+from engine import eval_fn, train_fn
 from model import SentimentClassifier
 from utils import create_data_loader, rating_to_sentiment
 
